@@ -1,0 +1,362 @@
+@charset "UTF-8";
+/*
+* style.css
+*/
+/*
+ * foundation/_reset.css
+ */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+  box-sizing: border-box; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*
+* foundation/_base.scss
+*/
+html, body {
+  width: 100%;
+  color: #3B4043;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: "Noto Sans JP", 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  text-size-adjust: 100%;
+  letter-spacing: 0.1em; }
+
+p, a {
+  -webkit-font-smoothing: antialiased; }
+
+a {
+  color: #3B4043;
+  text-decoration: none;
+  transition: .3s; }
+
+a:hover {
+  color: #e3a8b1;
+  transition: .3s; }
+
+img {
+  width: 100%;
+  vertical-align: bottom; }
+
+/*
+* layout/_container.scss
+*/
+.l-container {
+  position: relative;
+  margin: 0 auto;
+  padding: 80px 120px;
+  width: 980px;
+  text-align: center; }
+  @media screen and (max-width: 896px) {
+    .l-container {
+      width: 100%; } }
+  .l-container__fluid {
+    width: 100%; }
+
+/*
+* layout/_header.scss
+*/
+.l-header {
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  height: 70px;
+  transition: .3s;
+  z-index: 2; }
+
+/*
+* layout/_works.scss
+*/
+.l-works {
+  background-image: url(../../img/bg-sub.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-blend-mode: lighten;
+  box-shadow: 0px 0px 4px 2px #ddd inset; }
+
+/*
+* layout/_contact.scss
+*/
+.l-contact {
+  background-color: #fff; }
+
+/*
+* layout/_footer.scss
+*/
+.l-footer {
+  height: 70px;
+  line-height: 70px;
+  text-align: center; }
+
+/*
+* object/component/_title.scss
+*/
+.c-title {
+  display: inline-block;
+  margin: 20px 0 40px;
+  border-bottom: 5px solid #C08B63;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center; }
+
+/*
+* object/component/_arrow.scss
+*/
+.c-arrow {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  cursor: pointer;
+  z-index: 3; }
+
+/*
+* object/project/_header.scss
+*/
+.p-header__title {
+  font-size: 38px;
+  font-family: "Segoe Print";
+  font-weight: 700; }
+
+/*
+* object/project/_menu.scss
+*/
+.p-menu__list {
+  font-weight: 700; }
+
+.p-menu__item {
+  margin-right: 40px; }
+
+/*
+* object/project/_hero.scss
+*/
+.p-hero {
+  justify-content: center;
+  padding-top: 200px;
+  height: 700px;
+  text-align: center; }
+  .p-hero::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 700px;
+    background-image: url(../../../img/bg-hero_ver2.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #333;
+    z-index: -1; }
+  .p-hero__title {
+    color: #F2F2F2;
+    letter-spacing: 0.5em;
+    font-family: "Segoe Print";
+    font-weight: 700;
+    font-size: 38px; }
+
+/*
+* object/project/_profile.scss
+*/
+.p-profile__group {
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 120px;
+  text-align: left;
+  color: #F2F2F2; }
+
+.p-profile__img {
+  margin: 0 15px;
+  padding: 20px;
+  width: 30%; }
+
+.p-profile__explain {
+  padding: 0 20px;
+  width: 70%; }
+
+.p-profile__name {
+  font-size: 36px;
+  font-weight: 700; }
+
+.p-profile__item:first-of-type {
+  margin-bottom: 20px;
+  font-weight: 700; }
+
+/*
+* object/project/_skill.scss
+*/
+.p-skill__group {
+  flex-wrap: wrap;
+  margin-right: -30px; }
+
+.p-skill__card {
+  margin-right: 40px;
+  margin-bottom: 30px;
+  width: calc(33.3% - 40px);
+  background-color: #fff; }
+  .p-skill__card--padding {
+    padding: 20px 40px; }
+
+.p-skill__head {
+  margin-bottom: 40px;
+  font-size: 24px;
+  font-weight: 700; }
+
+.p-skill__tec {
+  margin-bottom: 40px; }
+
+.p-skill__item {
+  margin-bottom: 20px;
+  align-items: center; }
+
+.p-skill__mark {
+  flex-basis: 30%; }
+
+.p-skill__name {
+  text-align: center;
+  flex-grow: 1; }
+
+.p-skill__space {
+  height: 67.9px; }
+
+.p-skill__body {
+  text-align: left;
+  font-size: 14px; }
+
+/*
+* object/project/_slider.scss
+*/
+.p-slider {
+  margin-left: calc(20px);
+  width: 100%;
+  flex-flow: row nowrap;
+  overflow: hidden; }
+  .p-slider__item {
+    position: relative;
+    margin-right: 40px;
+    min-width: calc(50% - 40px); }
+    .p-slider__item::before {
+      content: '';
+      display: block;
+      padding-top: 140%; }
+  .p-slider__img {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 80%;
+    z-index: 2; }
+  .p-slider__body {
+    position: absolute;
+    top: 30%;
+    right: 0;
+    margin-right: 20px;
+    padding: 42% 20px 20px;
+    width: 80%;
+    text-align: left;
+    background-color: #EBD6BF;
+    z-index: 1; }
+    .p-slider__body p {
+      padding-bottom: 5px;
+      font-size: 12px; }
+  .p-slider__name {
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: 700; }
+  .p-slider__link {
+    font-size: 12px;
+    color: #165BA5; }
+  .p-slider__sub-name {
+    text-decoration: underline; }
+
+/*
+* object/project/_contact.scss
+*/
+.p-contact__icn {
+  display: block;
+  margin: 0 auto 20px;
+  width: 80px;
+  height: 80px; }
+
+/*
+* object/utility/_color.scss
+*/
+.u-color-w {
+  color: #F2F2F2; }
+
+.u-color-bg {
+  background-color: #F2EDE9;
+  box-shadow: 0px 0px 8px 2px #ddd inset; }
+
+/*
+* object/utility/_display.scss
+*/
+.u-flex {
+  display: flex; }
+
+/*
+* object/utility/_space.scss
+*/
+.u-px0 {
+  padding-right: 0;
+  padding-left: 0; }
+
+.u-pxs {
+  padding-right: 10px;
+  padding-left: 10px; }
+
+/*
+* object/utility/_position.scss
+*/
+.u-next {
+  right: 0; }
+
+.u-prev {
+  left: 0; }

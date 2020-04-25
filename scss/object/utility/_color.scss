@@ -1,0 +1,12 @@
+@charset "utf-8";
+/*
+* object/utility/_color.scss
+*/
+.u-color-w{
+  color: $font-color_sub1;
+}
+
+.u-color-bg{
+  background-color: $color_bg;
+  box-shadow: 0px 0px 8px 2px #ddd inset;
+}

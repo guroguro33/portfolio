@@ -1,0 +1,12 @@
+@charset "utf-8";
+/*
+* object/component/_title.scss
+*/
+.c-title{
+  display: inline-block;
+  margin: $space_xl 0 $space_3l;
+  border-bottom: 5px solid $color_bar;
+  font-size: $font-size_3l;
+  font-weight: 700;
+  text-align: center;
+}

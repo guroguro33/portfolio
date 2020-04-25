@@ -1,0 +1,12 @@
+@charset "utf-8";
+/*
+* object/project/_contact.scss
+*/
+.p-contact{
+  &__icn{
+    display: block;
+    margin: 0 auto $space_xl;
+    width: 80px;
+    height: 80px;
+  }
+}

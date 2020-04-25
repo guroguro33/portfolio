@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="ポートフォリオサイト">
+    <meta name="keywords" content="">
+    <!-- ファビコン -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <!-- font awesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
+		<!-- googleフォント -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <!-- CSS -->
+		<link rel="stylesheet" href="css/style.css">
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" defer></script>
+		<!-- javascript -->
+		<script src="js/script.js" defer></script>
+		
+    <title>Kurosuke's Portfolio</title>
+</head>
+<body>
+    <header>
+      <section class="l-header u-flex">
+        <h1 class="p-header__title"><a href="">Kurosuke</a></h1>
+        <div class="p-menu__trigger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav class="p-menu">
+          <ul class="p-menu__list u-flex">
+            <li class="p-menu__item"><a href="#profile" class="p-menu__link">PROFILE</a></li>
+            <li class="p-menu__item"><a href="#skill" class="p-menu__link">SKILL</a></li>
+            <li class="p-menu__item"><a href="#works" class="p-menu__link">WORKS</a></li>
+            <li class="p-menu__item"><a href="#contact" class="p-menu__link">CONTACT</a></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+
+    <main>
+      <section class="p-hero l-container__fluid u-flex">
+        <div class="p-hero__word">
+          <h2 class="p-hero__title">Kurosuke</h2>
+          <h2 class="p-hero__title">PORTFOLIO</h2>
+        </div>
+      </section>
+
+      <section class="l-profile">
+        <div class="l-container">
+          <h2 class="c-title u-color-w">PROFILE</h2>
+          <div class="l-container__body">
+            <div class="p-profile__group u-flex">
+              <div class="p-profile__img">
+                <img src="./img/user.svg" alt="kurosukeの画像">
+              </div>
+              <div class="p-profile__explain">
+                <h4 class="p-profile__name">Kurosuke</h4>
+                <p class="p-profile__item">1983年生まれ　新潟県出身</p>
+                <p class="p-profile__item">
+                  大学卒業後、電気設備の設計保守に14年従事<br>
+                  業務でWordPressを導入したことをきっかけにWeb系エンジニアに注目。Webサービス開発に従事したいと一念発起し退職した。現在、JavaScriptやphpなどを中心にフルスタックエンジニアを目指し猛烈に学習中
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="l-skill u-color-bg">
+        <div class="l-container u-px0">
+          <h2 class="c-title">SKILL</h2>
+          <div class="l-container__body">
+            <div class="p-skill__group u-flex">
+              <div class="p-skill__card">
+                <div class="p-skill__card--padding">
+                  <div class="p-skill__head">
+                    <span>コーディング</span>
+                  </div>
+                  <div class="p-skill__tec">
+                    <div class="p-skill__item u-flex">
+                      <div class="p-skill__mark">
+                        <img src="./img/icons8-html-5-50.png" alt="html5のマーク">
+                      </div>
+                      <p class="p-skill__name">HTML5</p>
+                    </div>
+                    <div class="p-skill__item u-flex">
+                      <div class="p-skill__mark">
+                        <img src="./img/icons8-css3-50.png" alt="CSS3のマーク">
+                      </div>
+                      <p class="p-skill__name">CSS3</p>
+                    </div>
+                  </div>
+                  <div class="p-skill__body">
+                    <p>既存サイトの模写や自作WEBサービス制作などで基本的なことは一通 り網羅しました。<br>
+                    CSSフレームワークはBootstrapが使用可能。<br>
+                    CSS設計はOOCSS、BEM、FLOCSSを使用します。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-skill__card">
+                <div class="p-skill__card--padding">
+                  <div class="p-skill__head">
+                    <span>フロントエンド</span>
+                  </div>
+                  <div class="p-skill__tec">
+                    <div class="p-skill__item u-flex">
+                      <div class="p-skill__mark">
+                        <img src="./img/icons8-javascript-50.png" alt="javascriptのマーク">
+                      </div>
+                      <p class="p-skill__name">JavaScript</p>
+                    </div>
+                    <div class="p-skill__item u-flex">
+                      <div class="p-skill__mark">
+                        <img src="./img/icons8-jquery-50.png" alt="jqueryのマーク">
+                      </div>
+                      <p class="p-skill__name">jQuery</p>
+                    </div>
+                  </div>
+                  <div class="p-skill__body">
+                    <p>JavaScriptはES5を中心に、ES6についても学習をしています。<br>
+                    今後、JSのフレームワークの学習及びアウトプットを行っていきます。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-skill__card">
+                <div class="p-skill__card--padding">
+                  <div class="p-skill__head">
+                    <span>バックエンド</span>
+                  </div>
+                  <div class="p-skill__tec">
+                    <div class="p-skill__item u-flex">
+                      <div class="p-skill__mark">
+                        <img src="./img/icons8-php-logo-50.png" alt="phpのマーク">
+                      </div>
+                      <p class="p-skill__name">php</p>
+                    </div>
+                    <div class="p-skill__space"></div>
+                  </div>
+                  <div class="p-skill__body">
+                    <p>phpは5及び7を中心に学習をしています。<br>
+                      今後、phpのフレームワークの学習及びアウトプットを行っていきます。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-skill__card">
+                <div class="p-skill__card--padding">
+                  <div class="p-skill__head">
+                    <span>データベース</span>
+                  </div>
+                  <div class="p-skill__tec">
+                    <div class="p-skill__item u-flex">
+                      <div class="p-skill__mark">
+                        <img src="./img/icons8-mysql-50.png" alt="mysqlのマーク">
+                      </div>
+                      <p class="p-skill__name">MySQL</p>
+                    </div>
+                    <div class="p-skill__space"></div>
+                  </div>
+                  <div class="p-skill__body">
+                    <p>phpMyAdminからの操作だけではなく、SQLコマンドでデータベース操作ができます。<br>
+                    DB設計についてもWebサービス制作時に実施しましたが、引き続き知識を深めていきます。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-skill__card">
+                <div class="p-skill__card--padding">
+                  <div class="p-skill__head">
+                    <span>インフラ</span>
+                  </div>
+                  <div class="p-skill__tec">
+                    <div class="p-skill__item u-flex">
+                      <div class="p-skill__mark">
+                        <img src="./img/icons8-server-50.png" alt="サーバーのマーク">
+                      </div>
+                      <p class="p-skill__name">Apache</p>
+                    </div>
+                    <div class="p-skill__space"></div>
+                  </div>
+                  <div class="p-skill__body">
+                    <p>レンタルサーバーを借り、ドメインを取得しデプロイしています。今後はAWSのEC2等について学習を進め、サーバー構築することを計画しています。</p>
+                  </div>
+                </div>
+              </div>
+              <div class="p-skill__card">
+                <div class="p-skill__card--padding">
+                  <div class="p-skill__head">
+                    <span>その他</span>
+                  </div>
+                  <div class="p-skill__tec">
+                    <div class="p-skill__item u-flex">
+                      <div class="p-skill__mark">
+                        <img src="./img/icons8-git-50.png" alt="gitのマーク">
+                      </div>
+                      <p class="p-skill__name">Git</p>
+                    </div>
+                    <div class="p-skill__item u-flex">
+                      <div class="p-skill__mark">
+                        <img src="./img/icons8-gulp-50.png" alt="gulpのマーク">
+                      </div>
+                      <p class="p-skill__name">gulp</p>
+                    </div>
+                  </div>
+                  <div class="p-skill__body">
+                    <p>アウトプット制作時はGitHubにプッシュし、機能追加時にはブランチを切ってプルリクし、仮想集団開発の訓練をしています。今後は開発環境にDockerを導入することを計画しています。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="l-works">
+        <div class="l-container u-px0">
+          <h2 class="c-title">WORKS</h2>
+          <div class="l-container__body">
+            <img src="./img/arrow-next.svg" class="c-arrow u-next" aria-hidden="true">
+            <img src="./img/arrow-prev.svg" class="c-arrow u-prev" aria-hidden="true">
+            <div class="p-slider u-flex">
+              <div class="p-slider__item">
+                <a href="" class="p-slider__img">
+                  <img src="./img/no-image.svg" alt="口コミサイトのイメージ">
+                </a>
+                <div class="p-slider__body">
+                  <span class="p-slider__name">口コミサイト</span><span class="p-slider__link">Github</span>
+                  <p><span class="p-slider__sub-name">内容</span><br>
+                  山形のおすすめスポットの口コミサイト</p>
+                  <p><span class="p-slider__sub-name">機能</span><br>
+                  ログイン、ログアウト、サインアップ、PW変更、PWリマインダ、スポットの投稿、口コミ投稿、ソート</p>
+                  <p><span class="p-slider__sub-name">制作期間</span><br>
+                  ●●時間</p>
+                  <p><span class="p-slider__sub-name">使用言語</span><br>
+                  HTML,CSS,php,MYSQL</p>
+                </div>
+              </div>
+              <div class="p-slider__item">
+                <a href="" class="p-slider__img">
+                  <img src="./img/no-image.svg" alt="バトルゲームのイメージ">
+                </a>
+                <div class="p-slider__body">
+                  <span class="p-slider__name">F〇風バトルゲーム</span><span class="p-slider__link">Github</span>
+                  <p><span class="p-slider__sub-name">内容</span><br>
+                  シンプルなバトルゲーム</p>
+                  <p><span class="p-slider__sub-name">機能</span><br>
+                  オブジェクト指向によりプロパティとメソッドを作成し、動的に作成</p>
+                  <p><span class="p-slider__sub-name">制作期間</span><br>
+                  ●●時間</p>
+                  <p><span class="p-slider__sub-name">使用言語</span><br>
+                  HTML,CSS,php,js</p>
+                </div>
+              </div>
+              <div class="p-slider__item">
+                <a href="" class="p-slider__img">
+                  <img src="./img/no-image.svg" alt="ポートフォリオサイトのイメージ">
+                </a>
+                <div class="p-slider__body">
+                  <span class="p-slider__name">ポートフォリオサイト</span><span class="p-slider__link">Github</span>
+                  <p><span class="p-slider__sub-name">内容</span><br>
+                  自分用のポートフォリオサイト</p>
+                  <p><span class="p-slider__sub-name">機能</span><br>
+                  CSS設計にFLOCSSを使用。またtransitionや@keyframeによりリッチなアニメーション機能を実装</p>
+                  <p><span class="p-slider__sub-name">制作期間</span><br>
+                  ●●時間</p>
+                  <p><span class="p-slider__sub-name">使用言語</span><br>
+                  HTML,CSS,js</p>
+                </div>
+              </div>
+              <div class="p-slider__item">
+                <a href="" class="p-slider__img">
+                  <img src="./img/no-image.svg" alt="口コミサイトのイメージ">
+                </a>
+                <div class="p-slider__body">
+                  <span class="p-slider__name">口コミサイト</span><span class="p-slider__link">Github</span>
+                  <p><span class="p-slider__sub-name">内容</span><br>
+                  山形のおすすめスポットの口コミサイト</p>
+                  <p><span class="p-slider__sub-name">機能</span><br>
+                  ログイン、ログアウト、サインアップ、PW変更、PWリマインダ、スポットの投稿、口コミ投稿、ソート</p>
+                  <p><span class="p-slider__sub-name">制作期間</span><br>
+                  ●●時間</p>
+                  <p><span class="p-slider__sub-name">使用言語</span><br>
+                  HTML,CSS,php,MYSQL</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </section>
+
+      <section class="l-contact">
+        <div class="l-container">
+          <h2 class="c-title">CONTACT</h2>
+          <div class="l-container__body">
+            <a class="p-contact__icn" href="https://twitter.com/guroguro33"><img src="./img/Twitter_Social_Icon_Circle_Color.svg" alt="Twitterのアイコン"></a>
+            <p class="p-contact__msg">お問い合わせやお仕事のご依頼など、お気軽にDM下さい！</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <section class="l-footer u-color-bg">
+        <p>© Copyright | Kurosuke 2020 All Right Reserved</p>
+      </section>
+    </footer>
+
+</body>
+</html>

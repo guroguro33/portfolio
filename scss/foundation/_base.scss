@@ -1,0 +1,84 @@
+@charset "utf-8";
+/*
+* foundation/_base.scss
+*/
+
+// ==============================
+// ブレイクポイント
+// ==============================
+$breakpoints: (
+  'sm': 'screen and (max-width: 480px)',
+  'md': 'screen and (max-width: 896px)',
+  'lg': 'screen and (max-width: 1024px)',
+  'xl': 'screen and (max-width: 1200px)',
+) !default;
+
+@mixin mq($breakpoint: sm){
+  @media #{map-get($breakpoints, $breakpoint)}{
+    @content;
+  }
+}
+
+// ==============================
+// 変数
+// ==============================
+$font-color_default: #3B4043;
+$font-color_sub1: #F2F2F2;
+$font-color_sub2: #165BA5;
+$color_bg: #F2EDE9;
+$color_bar: #C08B63;
+$color_corp: #e3a8b1;
+
+$site-width: 980px;
+
+$font-size_s: 12px;
+$font-size_m: 14px;
+$font-size_default: 16px;
+$font-size_l: 20px;
+$font-size_xl: 24px;
+$font-size_xxl: 30px;
+$font-size_3l: 36px;
+$font-size_4l: 38px;
+
+$space_s: 5px;
+$space_m: 10px;
+$space_l: 15px;
+$space_xl: 20px;
+$space_xxl: 30px;
+$space_3l: 40px;
+
+$font-family_main: 'Noto Sans JP', 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+$font-family_corp: 'Segoe Print';
+
+// ==================================
+// base
+// ==================================
+html, body {
+  width: 100%;
+  color: $font-color_default;
+  font-size: $font-size_default;
+  line-height: 1.6;
+  font-family: $font-family_main;
+  text-size-adjust: 100%;
+  letter-spacing: 0.1em;
+}
+
+p, a {
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: $font-color_default;
+  text-decoration: none;
+  transition: .3s;
+}
+
+a:hover {
+  color: $color_corp;
+  transition: .3s;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+}

@@ -1,0 +1,32 @@
+@charset "utf-8";
+/*
+* object/project/_profile.scss
+*/
+.p-profile{
+  &__group{
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 120px;
+    text-align: left;
+    color: $font-color_sub1;
+  }
+  &__img{
+    margin: 0 $space_l;
+    padding: $space_xl;
+    width: 30%;
+  }
+  &__explain{
+    padding: 0 $space_xl;
+    width: 70%;
+  }
+  &__name{
+    font-size: $font-size_3l;
+    font-weight: 700;
+  }
+  &__item{
+    &:first-of-type{
+      margin-bottom: $space_xl;
+      font-weight: 700;
+    }
+  }
+}

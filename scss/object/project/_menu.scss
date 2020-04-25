@@ -1,0 +1,13 @@
+@charset "utf-8";
+/*
+* object/project/_menu.scss
+*/
+.p-menu{
+  &__list{
+    // font-family: $font-family_corp;
+    font-weight: 700;
+  }  
+  &__item{
+    margin-right: $space_3l;
+  }
+}

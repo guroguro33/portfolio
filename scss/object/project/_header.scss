@@ -1,0 +1,11 @@
+@charset "utf-8";
+/*
+* object/project/_header.scss
+*/
+.p-header{
+  &__title{
+    font-size: $font-size_4l;
+    font-family: $font-family_corp;
+    font-weight: 700;
+  }  
+}

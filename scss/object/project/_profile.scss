@@ -4,16 +4,24 @@
 */
 .p-profile{
   &__group{
+    display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 120px;
     text-align: left;
     color: $font-color_sub1;
+    @include mq(md){
+      flex-direction: column;
+    }
   }
   &__img{
     margin: 0 $space_l;
     padding: $space_xl;
     width: 30%;
+    @include mq(md){
+      padding: 0;
+      width: 30%;
+    }
   }
   &__explain{
     padding: 0 $space_xl;
@@ -22,11 +30,17 @@
   &__name{
     font-size: $font-size_3l;
     font-weight: 700;
+    @include mq(md){
+      font-size: $font-size_xxl;
+    }
   }
   &__item{
     &:first-of-type{
       margin-bottom: $space_xl;
       font-weight: 700;
+    }
+    @include mq(md){
+      font-size: $font-size_m;
     }
   }
 }

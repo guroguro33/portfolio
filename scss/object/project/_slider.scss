@@ -8,36 +8,22 @@
   flex-flow: row nowrap;
   overflow: hidden;
   &__item{
-    position: relative;
     margin-right: $space_3l;
     min-width: calc(50% - #{$space_3l});
-    // min-height: 600px;
-    &::before{
-      content: '';
-      display: block;
-      padding-top: 140%;
-    }
   }
   &__img{
-    position: absolute;
-    top: 0;
     display: block;
-    width: 80%;
-    z-index: 2;
   }
   &__body{
-    position: absolute;
-    top: 30%;
-    right: 0;
-    margin-right: $space_xl;
-    padding: 42% $space_xl $space_xl;
-    width: 80%;
-    text-align: left;
+    padding: $space_xl;
     background-color: #EBD6BF;
-    z-index: 1;
+    text-align: left;
     p{
-      padding-bottom: $space_s;
+      padding-bottom: $space_m;
       font-size: $font-size_s;
+      &:first-of-type{
+        margin-top: $space_m;
+      }
     }
   }
   &__name{
@@ -50,6 +36,7 @@
     color: $font-color_sub2;
   }
   &__sub-name{
+    font-size: $font-size_m;
     text-decoration: underline;
   }
 }

@@ -8,8 +8,6 @@
     <meta name="keywords" content="">
     <!-- ファビコン -->
     <link rel="shortcut icon" href="favicon.ico">
-    <!-- font awesome -->
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css">
 		<!-- googleフォント -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <!-- CSS -->
@@ -25,17 +23,17 @@
     <header>
       <section class="l-header u-flex">
         <h1 class="p-header__title"><a href="">Kurosuke</a></h1>
-        <div class="p-menu__trigger">
+        <div class="p-menu__trigger js-toggle-sp-menu">
           <span></span>
           <span></span>
           <span></span>
         </div>
         <nav class="p-menu">
-          <ul class="p-menu__list u-flex">
-            <li class="p-menu__item"><a href="#profile" class="p-menu__link">PROFILE</a></li>
-            <li class="p-menu__item"><a href="#skill" class="p-menu__link">SKILL</a></li>
-            <li class="p-menu__item"><a href="#works" class="p-menu__link">WORKS</a></li>
-            <li class="p-menu__item"><a href="#contact" class="p-menu__link">CONTACT</a></li>
+          <ul class="p-menu__list">
+            <li class="p-menu__item"><a href="#profile" class="p-menu__link js-menu-link">PROFILE</a></li>
+            <li class="p-menu__item"><a href="#skill" class="p-menu__link js-menu-link">SKILL</a></li>
+            <li class="p-menu__item"><a href="#works" class="p-menu__link js-menu-link">WORKS</a></li>
+            <li class="p-menu__item"><a href="#contact" class="p-menu__link js-menu-link">CONTACT</a></li>
           </ul>
         </nav>
       </section>
@@ -49,11 +47,11 @@
         </div>
       </section>
 
-      <section class="l-profile">
+      <section id="profile">
         <div class="l-container">
           <h2 class="c-title u-color-w">PROFILE</h2>
           <div class="l-container__body">
-            <div class="p-profile__group u-flex">
+            <div class="p-profile__group">
               <div class="p-profile__img">
                 <img src="./img/user.svg" alt="kurosukeの画像">
               </div>
@@ -70,7 +68,7 @@
         </div>
       </section>
 
-      <section class="l-skill u-color-bg">
+      <section id="skill" class="u-color-bg">
         <div class="l-container u-px0">
           <h2 class="c-title">SKILL</h2>
           <div class="l-container__body">
@@ -214,10 +212,10 @@
         </div>
       </section>
 
-      <section class="l-works">
+      <section id="works">
         <div class="l-container u-px0">
           <h2 class="c-title">WORKS</h2>
-          <div class="l-container__body">
+          <div class="l-container__body u-space__arrow">
             <img src="./img/arrow-next.svg" class="c-arrow u-next" aria-hidden="true">
             <img src="./img/arrow-prev.svg" class="c-arrow u-prev" aria-hidden="true">
             <div class="p-slider u-flex">
@@ -226,7 +224,7 @@
                   <img src="./img/no-image.svg" alt="口コミサイトのイメージ">
                 </a>
                 <div class="p-slider__body">
-                  <span class="p-slider__name">口コミサイト</span><span class="p-slider__link">Github</span>
+                  <a href="" class="p-slider__name">口コミサイト</a><a href="" class="p-slider__link">Github</a>
                   <p><span class="p-slider__sub-name">内容</span><br>
                   山形のおすすめスポットの口コミサイト</p>
                   <p><span class="p-slider__sub-name">機能</span><br>
@@ -242,7 +240,7 @@
                   <img src="./img/no-image.svg" alt="バトルゲームのイメージ">
                 </a>
                 <div class="p-slider__body">
-                  <span class="p-slider__name">F〇風バトルゲーム</span><span class="p-slider__link">Github</span>
+                  <a href="" class="p-slider__name">F〇風バトルゲーム</a><a href="" class="p-slider__link">Github</a>
                   <p><span class="p-slider__sub-name">内容</span><br>
                   シンプルなバトルゲーム</p>
                   <p><span class="p-slider__sub-name">機能</span><br>
@@ -258,7 +256,7 @@
                   <img src="./img/no-image.svg" alt="ポートフォリオサイトのイメージ">
                 </a>
                 <div class="p-slider__body">
-                  <span class="p-slider__name">ポートフォリオサイト</span><span class="p-slider__link">Github</span>
+                  <a href="" class="p-slider__name">ポートフォリオサイト</a><a href="" class="p-slider__link">Github</a>
                   <p><span class="p-slider__sub-name">内容</span><br>
                   自分用のポートフォリオサイト</p>
                   <p><span class="p-slider__sub-name">機能</span><br>
@@ -274,7 +272,7 @@
                   <img src="./img/no-image.svg" alt="口コミサイトのイメージ">
                 </a>
                 <div class="p-slider__body">
-                  <span class="p-slider__name">口コミサイト</span><span class="p-slider__link">Github</span>
+                  <a href="" class="p-slider__name">口コミサイト</a><a href="" class="p-slider__link">Github</a>
                   <p><span class="p-slider__sub-name">内容</span><br>
                   山形のおすすめスポットの口コミサイト</p>
                   <p><span class="p-slider__sub-name">機能</span><br>
@@ -290,7 +288,7 @@
         </div> 
       </section>
 
-      <section class="l-contact">
+      <section id="contact">
         <div class="l-container">
           <h2 class="c-title">CONTACT</h2>
           <div class="l-container__body">

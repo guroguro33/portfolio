@@ -4,9 +4,12 @@
 */
 .c-title{
   display: inline-block;
-  margin: $space_xl 0 $space_3l;
+  margin: $space_xl 0 $space_4l;
   border-bottom: 5px solid $color_bar;
   font-size: $font-size_3l;
   font-weight: 700;
   text-align: center;
+  @include mq(md){
+    margin: $space_l 0 $space_4l;
+  }
 }

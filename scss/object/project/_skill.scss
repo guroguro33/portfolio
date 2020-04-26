@@ -6,6 +6,12 @@
   &__group{
     flex-wrap: wrap;
     margin-right: -$space_xxl;
+    @include mq(md){
+      margin-right: -$space_xl;
+    }
+    @include mq(sm){
+      margin-right: 0;
+    }
   }
   &__card{
     margin-right: $space_3l;
@@ -14,6 +20,13 @@
     background-color: #fff;
     &--padding{
       padding: $space_xl $space_3l;
+    }
+    @include mq(md){
+    margin-right: $space_xl;
+    width: calc(50% - #{$space_xl});
+    }
+    @include mq(sm){
+    width: 100%;
     }
   }
   &__head{

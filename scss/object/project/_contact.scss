@@ -8,5 +8,17 @@
     margin: 0 auto $space_xl;
     width: 80px;
     height: 80px;
+    transition: all .3s ease;
+    &:hover{
+      animation: roll 1s forwards;
+    }
+  }
+}
+@keyframes roll {
+  from {
+    transform: rotate(0deg) scale(1);
+  }
+  to {
+    transform: rotate(-360deg) scale(1.2);
   }
 }

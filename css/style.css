@@ -98,9 +98,10 @@ img {
       padding: 40px 120px; } }
   .l-container__fluid {
     width: 100%; }
-  .l-container__body {
-    margin-right: 20px;
-    margin-left: 20px; }
+  @media screen and (max-width: 896px) {
+    .l-container__body {
+      margin-right: 20px;
+      margin-left: 20px; } }
 
 /*
 * layout/_header.scss
@@ -386,15 +387,13 @@ img {
 * object/project/_slider.scss
 */
 .p-slider {
-  margin-left: calc(20px);
-  width: 100%;
-  flex-flow: row nowrap;
-  overflow: hidden; }
+  margin: 0 auto;
+  width: 100%; }
+  .p-slider__container {
+    position: relative;
+    flex-flow: row nowrap; }
   .p-slider__item {
-    margin-right: 40px;
-    min-width: calc(50% - 40px); }
-  .p-slider__img {
-    display: block; }
+    width: 100%; }
   .p-slider__body {
     padding: 20px;
     background-color: #EBD6BF;
@@ -405,15 +404,35 @@ img {
       .p-slider__body p:first-of-type {
         margin-top: 10px; }
   .p-slider__name {
+    display: inline-block;
     margin-right: 20px;
     font-size: 20px;
     font-weight: 700; }
   .p-slider__link {
+    display: inline-block;
     font-size: 12px;
     color: #165BA5; }
   .p-slider__sub-name {
     font-size: 14px;
     text-decoration: underline; }
+
+.slide-arrow {
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer; }
+
+.prev-arrow {
+  left: -40px; }
+
+.next-arrow {
+  right: -40px; }
+
+.slick-dots li button:before {
+  top: 20px !important;
+  font-size: 30px !important; }
 
 /*
 * object/project/_contact.scss
@@ -422,7 +441,16 @@ img {
   display: block;
   margin: 0 auto 20px;
   width: 80px;
-  height: 80px; }
+  height: 80px;
+  transition: all .3s ease; }
+  .p-contact__icn:hover {
+    animation: roll 1s forwards; }
+
+@keyframes roll {
+  from {
+    transform: rotate(0deg) scale(1); }
+  to {
+    transform: rotate(-360deg) scale(1.2); } }
 
 /*
 * object/utility/_color.scss
@@ -447,9 +475,8 @@ img {
   padding-right: 0;
   padding-left: 0; }
 
-.u-space__arrow {
-  padding-right: 60px;
-  padding-left: 60px; }
+.u-mr40 {
+  margin: 0 20px; }
 
 /*
 * object/utility/_position.scss

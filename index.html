@@ -11,11 +11,16 @@
 		<!-- googleフォント -->
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <!-- CSS -->
-		<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- slick.js -->
+    <link href="./slick/slick-theme.css" rel="stylesheet">
+    <link href="./slick/slick.css" rel="stylesheet">
 		<!-- jQuery -->
 		<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous" defer></script>
+		<!-- slick.js -->
+		<script src="./slick/slick.min.js" defer></script>
 		<!-- javascript -->
-		<script src="js/script.js" defer></script>
+		<script src="./js/script.js" defer></script>
 		
     <title>Kurosuke's Portfolio</title>
 </head>
@@ -215,72 +220,78 @@
       <section id="works">
         <div class="l-container u-px0">
           <h2 class="c-title">WORKS</h2>
-          <div class="l-container__body u-space__arrow">
-            <img src="./img/arrow-next.svg" class="c-arrow u-next" aria-hidden="true">
-            <img src="./img/arrow-prev.svg" class="c-arrow u-prev" aria-hidden="true">
-            <div class="p-slider u-flex">
+          <div class="l-container__body p-slider">
+            <div class="p-slider__container slider">
               <div class="p-slider__item">
-                <a href="" class="p-slider__img">
-                  <img src="./img/no-image.svg" alt="口コミサイトのイメージ">
-                </a>
-                <div class="p-slider__body">
-                  <a href="" class="p-slider__name">口コミサイト</a><a href="" class="p-slider__link">Github</a>
-                  <p><span class="p-slider__sub-name">内容</span><br>
-                  山形のおすすめスポットの口コミサイト</p>
-                  <p><span class="p-slider__sub-name">機能</span><br>
-                  ログイン、ログアウト、サインアップ、PW変更、PWリマインダ、スポットの投稿、口コミ投稿、ソート</p>
-                  <p><span class="p-slider__sub-name">制作期間</span><br>
-                  ●●時間</p>
-                  <p><span class="p-slider__sub-name">使用言語</span><br>
-                  HTML,CSS,php,MYSQL</p>
+                <div class="u-mr40">
+                  <a href="" class="p-slider__img">
+                    <img src="./img/no-image.svg" alt="口コミサイトのイメージ">
+                  </a>
+                  <div class="p-slider__body">
+                    <a href="" class="p-slider__name">口コミサイト</a><a href="" class="p-slider__link">Github</a>
+                    <p><span class="p-slider__sub-name">内容</span><br>
+                    山形のおすすめスポットの口コミサイト</p>
+                    <p><span class="p-slider__sub-name">機能</span><br>
+                    ログイン、ログアウト、サインアップ、PW変更、PWリマインダ、スポットの投稿、口コミ投稿、ソート</p>
+                    <p><span class="p-slider__sub-name">制作期間</span><br>
+                    ●●時間</p>
+                    <p><span class="p-slider__sub-name">使用言語</span><br>
+                    HTML,CSS,php,MYSQL</p>
+                  </div>
                 </div>
               </div>
               <div class="p-slider__item">
-                <a href="" class="p-slider__img">
-                  <img src="./img/no-image.svg" alt="バトルゲームのイメージ">
-                </a>
-                <div class="p-slider__body">
-                  <a href="" class="p-slider__name">F〇風バトルゲーム</a><a href="" class="p-slider__link">Github</a>
-                  <p><span class="p-slider__sub-name">内容</span><br>
-                  シンプルなバトルゲーム</p>
-                  <p><span class="p-slider__sub-name">機能</span><br>
-                  オブジェクト指向によりプロパティとメソッドを作成し、動的に作成</p>
-                  <p><span class="p-slider__sub-name">制作期間</span><br>
-                  ●●時間</p>
-                  <p><span class="p-slider__sub-name">使用言語</span><br>
-                  HTML,CSS,php,js</p>
+                <div class="u-mr40">
+                  <a href="" class="p-slider__img">
+                    <img src="./img/no-image.svg" alt="バトルゲームのイメージ">
+                  </a>
+                  <div class="p-slider__body">
+                    <a href="" class="p-slider__name">F〇風バトルゲーム</a><a href="" class="p-slider__link">Github</a>
+                    <p><span class="p-slider__sub-name">内容</span><br>
+                    シンプルなバトルゲーム</p>
+                    <p><span class="p-slider__sub-name">機能</span><br>
+                    オブジェクト指向によりプロパティとメソッドを作成し、動的に作成</p>
+                    <p><span class="p-slider__sub-name">制作期間</span><br>
+                    ●●時間</p>
+                    <p><span class="p-slider__sub-name">使用言語</span><br>
+                    HTML,CSS,php,js</p>
+                  </div>
                 </div>
               </div>
               <div class="p-slider__item">
-                <a href="" class="p-slider__img">
-                  <img src="./img/no-image.svg" alt="ポートフォリオサイトのイメージ">
-                </a>
-                <div class="p-slider__body">
-                  <a href="" class="p-slider__name">ポートフォリオサイト</a><a href="" class="p-slider__link">Github</a>
-                  <p><span class="p-slider__sub-name">内容</span><br>
-                  自分用のポートフォリオサイト</p>
-                  <p><span class="p-slider__sub-name">機能</span><br>
-                  CSS設計にFLOCSSを使用。またtransitionや@keyframeによりリッチなアニメーション機能を実装</p>
-                  <p><span class="p-slider__sub-name">制作期間</span><br>
-                  ●●時間</p>
-                  <p><span class="p-slider__sub-name">使用言語</span><br>
-                  HTML,CSS,js</p>
+                <div class="u-mr40">
+                  <a href="" class="p-slider__img">
+                    <img src="./img/no-image.svg" alt="ポートフォリオサイトのイメージ">
+                  </a>
+                  <div class="p-slider__body">
+                    <a href="" class="p-slider__name">ポートフォリオサイト</a><a href="" class="p-slider__link">Github</a>
+                    <p><span class="p-slider__sub-name">内容</span><br>
+                    自分用のポートフォリオサイト</p>
+                    <p><span class="p-slider__sub-name">機能</span><br>
+                    CSS設計にFLOCSSを使用。またtransitionや@keyframeによりリッチなアニメーション機能を実装</p>
+                    <p><span class="p-slider__sub-name">制作期間</span><br>
+                    ●●時間</p>
+                    <p><span class="p-slider__sub-name">使用言語</span><br>
+                    HTML,CSS,js</p>
+                  </div>
                 </div>
               </div>
               <div class="p-slider__item">
-                <a href="" class="p-slider__img">
-                  <img src="./img/no-image.svg" alt="口コミサイトのイメージ">
-                </a>
-                <div class="p-slider__body">
-                  <a href="" class="p-slider__name">口コミサイト</a><a href="" class="p-slider__link">Github</a>
-                  <p><span class="p-slider__sub-name">内容</span><br>
-                  山形のおすすめスポットの口コミサイト</p>
-                  <p><span class="p-slider__sub-name">機能</span><br>
-                  ログイン、ログアウト、サインアップ、PW変更、PWリマインダ、スポットの投稿、口コミ投稿、ソート</p>
-                  <p><span class="p-slider__sub-name">制作期間</span><br>
-                  ●●時間</p>
-                  <p><span class="p-slider__sub-name">使用言語</span><br>
-                  HTML,CSS,php,MYSQL</p>
+                <div class="u-mr40">
+                  <a href="" class="p-slider__img">
+                    <img src="./img/no-image.svg" alt="口コミサイトのイメージ">
+                  </a>
+                  <div class="p-slider__body">
+                    <a href="" class="p-slider__name">口コミサイト</a><a href="" class="p-slider__link">Github</a>
+                    <p><span class="p-slider__sub-name">内容</span><br>
+                    山形のおすすめスポットの口コミサイト</p>
+                    <p><span class="p-slider__sub-name">機能</span><br>
+                    ログイン、ログアウト、サインアップ、PW変更、PWリマインダ、スポットの投稿、口コミ投稿、ソート</p>
+                    <p><span class="p-slider__sub-name">制作期間</span><br>
+                    ●●時間</p>
+                    <p><span class="p-slider__sub-name">使用言語</span><br>
+                    HTML,CSS,php,MYSQL</p>
+                  </div>
                 </div>
               </div>
             </div>

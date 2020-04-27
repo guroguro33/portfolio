@@ -16,6 +16,17 @@ $(function(){
     $menu.removeClass('active');
   });
 
+  // スムーズスクロール
+  $('a[href^="#"').on('click',function(){
+    
+    var href = $(this).attr('href'),
+        target = $((href == '#' || href == '')? 'html': href),
+        position = target.offset().top + 50;
+    
+    $('html,body').animate({scrollTop: position}, 500);
+    return false; //aタグの機能無効
+  });
+
   // SKILLのカードがフェードイン
   $(window).scroll(function(){ //スクロールした時、onメソッド不可
     $('.js-fadeIn').each(function(){
@@ -51,8 +62,16 @@ $(function(){
       console.log("textStatus     : " + textStatus);    // タイムアウト、パースエラー
       console.log("errorThrown    : " + errorThrown.message); // 例外情報
     });
-
-
   });
 
+  // slick.js
+  $('.slider').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    prevArrow: '<img src="../img/arrow-prev.svg" class="slide-arrow prev-arrow">',
+    nextArrow: '<img src="../img/arrow-next.svg" class="slide-arrow next-arrow">',
+    dots: true,
+  });
 });

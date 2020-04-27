@@ -3,16 +3,17 @@
 * object/project/_slider.scss
 */
 .p-slider{
-  margin-left: calc(#{$space_3l / 2});
+  margin: 0 auto;
   width: 100%;
-  flex-flow: row nowrap;
-  overflow: hidden;
+  &__container{
+    position: relative;
+    flex-flow: row nowrap;
+  }
   &__item{
-    margin-right: $space_3l;
-    min-width: calc(50% - #{$space_3l});
+    width: 100%;
   }
   &__img{
-    display: block;
+
   }
   &__body{
     padding: $space_xl;
@@ -27,11 +28,13 @@
     }
   }
   &__name{
+    display: inline-block;
     margin-right: $space_xl;
     font-size: $font-size_l;
     font-weight: 700;
   }
   &__link{
+    display: inline-block;
     font-size: $font-size_s;
     color: $font-color_sub2;
   }
@@ -39,4 +42,23 @@
     font-size: $font-size_m;
     text-decoration: underline;
   }
+}
+// slick setting
+.slide-arrow{
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.prev-arrow{
+  left: -40px;
+}
+.next-arrow{
+  right: -40px;
+}
+.slick-dots li button:before {
+  top: 20px !important;
+  font-size: 30px !important;
 }

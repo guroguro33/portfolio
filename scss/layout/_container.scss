@@ -16,7 +16,9 @@
     width: 100%;
   }
   &__body{
-    margin-right: $space_xl;
-    margin-left: $space_xl;
+    @include mq(md){
+      margin-right: $space_xl;
+      margin-left: $space_xl;
+    }
   }
 }

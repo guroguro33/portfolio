@@ -1,0 +1,9 @@
+@charset "utf-8";
+/*
+* layout/_profile.scss
+*/
+#profile{
+  @include mq(md){
+    // background: #333;
+  }
+}

@@ -4,7 +4,13 @@
 */
 .u-next{
   right: 0;
+  @include mq(md){
+    right: $space_xl;
+  }
 }
 .u-prev{
   left: 0;
+  @include mq(md){
+    left: $space_xl;
+  }
 }

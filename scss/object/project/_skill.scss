@@ -18,6 +18,16 @@
     margin-bottom: $space_xxl;
     width: calc(33.3% - #{$space_3l});
     background-color: #fff;
+    border-radius: 5px;
+    // fadeInの装飾
+    opacity: 0.1;
+    transform: translateY(-80px);
+    transition: 1s;
+    &.fadeIn{
+      opacity: 1;
+      transform: translateY(0);
+    }
+    // fadeInここまで
     &--padding{
       padding: $space_xl $space_3l;
     }

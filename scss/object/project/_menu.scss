@@ -38,6 +38,9 @@
       margin-bottom: $space_xl;
     }
   }
+  &__link:hover{
+    transform: scale(1.2);
+  }
   &__trigger{
     display: none;
     @include mq(md){

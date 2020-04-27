@@ -130,7 +130,9 @@ img {
   @media screen and (max-width: 896px) {
     .l-header {
       padding: 0 20px;
-      height: 50px; } }
+      height: 50px; }
+      .l-header a {
+        color: inherit; } }
 
 /*
 * layout/_profile.scss
@@ -319,7 +321,8 @@ img {
     letter-spacing: 0.5em;
     font-family: "Segoe Print";
     font-weight: 700;
-    font-size: 38px; }
+    font-size: 38px;
+    cursor: pointer; }
     @media screen and (max-width: 480px) {
       .p-hero__title {
         font-size: 24px; } }
@@ -462,6 +465,10 @@ img {
     flex-flow: row nowrap; }
   .p-slider__item {
     width: 100%; }
+  .p-slider__img {
+    transition: all .3s; }
+    .p-slider__img:hover {
+      opacity: .85; }
   .p-slider__body {
     padding: 20px;
     background-color: #EBD6BF;

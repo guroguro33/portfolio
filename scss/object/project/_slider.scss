@@ -16,6 +16,10 @@
     width: 100%;
   }
   &__img{
+    transition: all .3s;
+    &:hover{
+      opacity: .85;
+    }
 
   }
   &__body{

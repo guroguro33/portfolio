@@ -34,6 +34,7 @@
     font-family: $font-family_corp;
     font-weight: 700;
     font-size: $font-size_4l;
+    cursor: pointer;
     @include mq(sm){
       font-size: $font-size_xl;
     }

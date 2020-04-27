@@ -23,5 +23,8 @@
   @include mq(md){
     padding: 0 $space_xl;
     height: 50px;
+    & a{
+      color: inherit;
+    }
   }
 }

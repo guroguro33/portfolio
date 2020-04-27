@@ -10,8 +10,15 @@
   text-align: center;
   @include mq(md){
     width: 100%;
+    padding: 40px 120px;
   }
   &__fluid{
     width: 100%;
+  }
+  &__body{
+    @include mq(md){
+      margin-right: $space_xl;
+      margin-left: $space_xl;
+    }
   }
 }

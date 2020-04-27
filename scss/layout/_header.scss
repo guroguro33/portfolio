@@ -12,4 +12,7 @@
   height: 70px;
   transition: .3s;
   z-index: 2;
+  @include mq(md){
+    padding: 0 $space_xl;
+  }
 }

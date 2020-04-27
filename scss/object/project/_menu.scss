@@ -16,7 +16,7 @@
     text-align: center;
     &.active{
       transform: translateX(-100%);
-      z-index: 3;
+      z-index: 4;
     }
   } 
   &__list{
@@ -40,6 +40,7 @@
   }
   &__link:hover{
     transform: scale(1.2);
+    color: $color_corp;
   }
   &__trigger{
     display: none;
@@ -50,7 +51,8 @@
     position: relative;
     width: 40px;
     height: 32px;
-    z-index: 4;
+    cursor: pointer;
+    z-index: 5;
     span{
       display: inline-block;
       position: absolute;

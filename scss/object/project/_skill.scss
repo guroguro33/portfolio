@@ -5,13 +5,7 @@
 .p-skill{
   &__group{
     flex-wrap: wrap;
-    margin-right: -$space_xxl;
-    @include mq(md){
-      margin-right: -$space_xl;
-    }
-    @include mq(sm){
-      margin-right: 0;
-    }
+    justify-content: space-between;
   }
   &__card{
     margin-right: $space_3l;
@@ -19,9 +13,12 @@
     width: calc(33.3% - #{$space_3l});
     background-color: #fff;
     border-radius: 5px;
+    &:nth-child(3n){
+      margin-right: 0;
+    }
     // fadeInの装飾
     opacity: 0.1;
-    transform: translateY(-80px);
+    transform: translateY(50px);
     transition: 1s;
     &.fadeIn{
       opacity: 1;
@@ -30,22 +27,42 @@
     // fadeInここまで
     &--padding{
       padding: $space_xl $space_3l;
+      @include mq(md){
+        padding: $space_l $space_xl;
+      }
     }
     @include mq(md){
-    margin-right: $space_xl;
-    width: calc(50% - #{$space_xl});
+      margin-right: $space_m;
+      width: calc(50% - #{$space_m});
+      font-size: $font-size_s;
+      &:nth-child(3n){
+        margin-right: $space_m;
+      }
+      &:nth-child(2n){
+        margin-right: 0;
+      }
     }
     @include mq(sm){
-    width: 100%;
+      width: 100%;
+      margin-right: 0;
+      &:nth-child(3n){
+        margin-right: 0;
+      }
     }
   }
   &__head{
     margin-bottom: $space_3l;
     font-size: $font-size_xl;
     font-weight: 700;
+    @include mq(md){
+      font-size: $font-size_l;
+    }
   }
   &__tec{
     margin-bottom: $space_3l;
+    @include mq(md){
+      font-size: $font-size_m;
+    }
   }
   &__item{
     margin-bottom: $space_xl;
@@ -64,5 +81,8 @@
   &__body{
     text-align: left;
     font-size: $font-size_m;
+    @include mq(md){
+      // font-size: inherit;
+    }
   }
 }

@@ -5,6 +5,9 @@
 .p-slider{
   margin: 0 auto;
   width: 100%;
+  @include mq(md){
+    width: 90%;
+  }
   &__container{
     position: relative;
     flex-flow: row nowrap;
@@ -19,6 +22,9 @@
     padding: $space_xl;
     background-color: #EBD6BF;
     text-align: left;
+    @include mq(md){
+      padding: $space_l;
+    }
     p{
       padding-bottom: $space_m;
       font-size: $font-size_s;
@@ -32,6 +38,9 @@
     margin-right: $space_xl;
     font-size: $font-size_l;
     font-weight: 700;
+    @include mq(md){
+      font-size: $font-size_m;
+    }
   }
   &__link{
     display: inline-block;
@@ -51,12 +60,23 @@
   width: 40px;
   height: 40px;
   cursor: pointer;
+  z-index: 2;
+  @include mq(md){
+    top: inherit;
+    bottom: -60px;
+  }
 }
 .prev-arrow{
-  left: -40px;
+  left: 0px;
+  @include mq(md){
+    left: 15px;
+  }
 }
 .next-arrow{
-  right: -40px;
+  right: 0px;
+  @include mq(md){
+    right: 15px;
+  }
 }
 .slick-dots li button:before {
   top: 20px !important;

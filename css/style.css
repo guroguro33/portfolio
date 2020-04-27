@@ -65,6 +65,12 @@ html, body {
   font-family: "Noto Sans JP", 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   text-size-adjust: 100%;
   letter-spacing: 0.1em; }
+  @media screen and (max-width: 896px) {
+    html, body {
+      font-size: 14px; } }
+  @media screen and (max-width: 480px) {
+    html, body {
+      font-size: 12px; } }
 
 p, a {
   -webkit-font-smoothing: antialiased; }
@@ -90,12 +96,12 @@ img {
   position: relative;
   margin: 0 auto;
   padding: 80px 120px;
-  width: 980px;
+  max-width: 980px;
   text-align: center; }
   @media screen and (max-width: 896px) {
     .l-container {
       width: 100%;
-      padding: 40px 120px; } }
+      padding: 40px 0; } }
   .l-container__fluid {
     width: 100%; }
   @media screen and (max-width: 896px) {
@@ -111,15 +117,24 @@ img {
   justify-content: space-between;
   align-items: center;
   padding: 0 30px;
-  background-color: rgba(255, 255, 255, 0.5);
   width: 100%;
   height: 70px;
   transition: .3s;
-  z-index: 2; }
+  z-index: 3; }
+  .l-header a {
+    color: #f2f2f2; }
+  .l-header.float-active {
+    background-color: rgba(255, 255, 255, 0.5); }
+    .l-header.float-active a {
+      color: #333; }
   @media screen and (max-width: 896px) {
     .l-header {
-      padding: 0 20px; } }
+      padding: 0 20px;
+      height: 50px; } }
 
+/*
+* layout/_profile.scss
+*/
 /*
 * layout/_works.scss
 */
@@ -136,14 +151,25 @@ img {
 */
 #contact {
   background-color: #fff; }
+  #contact br {
+    display: none; }
+    @media screen and (max-width: 480px) {
+      #contact br {
+        display: block; } }
 
 /*
 * layout/_footer.scss
 */
 .l-footer {
+  padding: 0 20px;
   height: 70px;
-  line-height: 70px;
-  text-align: center; }
+  align-items: center;
+  justify-content: center; }
+  .l-footer br {
+    display: none; }
+    @media screen and (max-width: 480px) {
+      .l-footer br {
+        display: block; } }
 
 /*
 * object/component/_title.scss
@@ -158,6 +184,10 @@ img {
   @media screen and (max-width: 896px) {
     .c-title {
       margin: 15px 0 60px; } }
+  @media screen and (max-width: 480px) {
+    .c-title {
+      margin: 15px 0 30px;
+      font-size: 30px; } }
 
 /*
 * object/component/_arrow.scss
@@ -179,6 +209,9 @@ img {
   @media screen and (max-width: 896px) {
     .p-header__title {
       font-size: 24px; } }
+  @media screen and (max-width: 480px) {
+    .p-header__title {
+      font-size: 20px; } }
 
 /*
 * object/project/_menu.scss
@@ -197,7 +230,7 @@ img {
     text-align: center; }
     .p-menu.active {
       transform: translateX(-100%);
-      z-index: 3; } }
+      z-index: 4; } }
 
 .p-menu__list {
   display: flex;
@@ -217,7 +250,8 @@ img {
       margin-bottom: 20px; } }
 
 .p-menu__link:hover {
-  transform: scale(1.2); }
+  transform: scale(1.2);
+  color: #FFCE8C; }
 
 .p-menu__trigger {
   display: none;
@@ -225,7 +259,8 @@ img {
   position: relative;
   width: 40px;
   height: 32px;
-  z-index: 4; }
+  cursor: pointer;
+  z-index: 5; }
   @media screen and (max-width: 896px) {
     .p-menu__trigger {
       display: inline-block; } }
@@ -259,6 +294,9 @@ img {
   padding-top: 200px;
   height: 700px;
   text-align: center; }
+  @media screen and (max-width: 896px) {
+    .p-hero {
+      height: 600px; } }
   .p-hero::before {
     content: '';
     position: fixed;
@@ -273,12 +311,18 @@ img {
     background-position: center;
     background-color: #333;
     z-index: -1; }
+    @media screen and (max-width: 896px) {
+      .p-hero::before {
+        background-size: cover; } }
   .p-hero__title {
     color: #F2F2F2;
     letter-spacing: 0.5em;
     font-family: "Segoe Print";
     font-weight: 700;
     font-size: 38px; }
+    @media screen and (max-width: 480px) {
+      .p-hero__title {
+        font-size: 24px; } }
 
 /*
 * object/project/_profile.scss
@@ -292,7 +336,8 @@ img {
   color: #F2F2F2; }
   @media screen and (max-width: 896px) {
     .p-profile__group {
-      flex-direction: column; } }
+      flex-direction: column;
+      text-align: inherit; } }
 
 .p-profile__img {
   margin: 0 15px;
@@ -300,12 +345,16 @@ img {
   width: 30%; }
   @media screen and (max-width: 896px) {
     .p-profile__img {
+      margin-bottom: 15px;
       padding: 0;
       width: 30%; } }
 
 .p-profile__explain {
   padding: 0 20px;
   width: 70%; }
+  @media screen and (max-width: 896px) {
+    .p-profile__explain {
+      width: 90%; } }
 
 .p-profile__name {
   font-size: 36px;
@@ -313,27 +362,24 @@ img {
   @media screen and (max-width: 896px) {
     .p-profile__name {
       font-size: 30px; } }
+  @media screen and (max-width: 480px) {
+    .p-profile__name {
+      font-size: 20px; } }
 
 .p-profile__item:first-of-type {
   margin-bottom: 20px;
   font-weight: 700; }
 
 @media screen and (max-width: 896px) {
-  .p-profile__item {
-    font-size: 14px; } }
+  .p-profile__item:last-child {
+    text-align: left; } }
 
 /*
 * object/project/_skill.scss
 */
 .p-skill__group {
   flex-wrap: wrap;
-  margin-right: -30px; }
-  @media screen and (max-width: 896px) {
-    .p-skill__group {
-      margin-right: -20px; } }
-  @media screen and (max-width: 480px) {
-    .p-skill__group {
-      margin-right: 0; } }
+  justify-content: space-between; }
 
 .p-skill__card {
   margin-right: 40px;
@@ -342,28 +388,47 @@ img {
   background-color: #fff;
   border-radius: 5px;
   opacity: 0.1;
-  transform: translateY(-80px);
+  transform: translateY(50px);
   transition: 1s; }
+  .p-skill__card:nth-child(3n) {
+    margin-right: 0; }
   .p-skill__card.fadeIn {
     opacity: 1;
     transform: translateY(0); }
   .p-skill__card--padding {
     padding: 20px 40px; }
+    @media screen and (max-width: 896px) {
+      .p-skill__card--padding {
+        padding: 15px 20px; } }
   @media screen and (max-width: 896px) {
     .p-skill__card {
-      margin-right: 20px;
-      width: calc(50% - 20px); } }
+      margin-right: 10px;
+      width: calc(50% - 10px);
+      font-size: 12px; }
+      .p-skill__card:nth-child(3n) {
+        margin-right: 10px; }
+      .p-skill__card:nth-child(2n) {
+        margin-right: 0; } }
   @media screen and (max-width: 480px) {
     .p-skill__card {
-      width: 100%; } }
+      width: 100%;
+      margin-right: 0; }
+      .p-skill__card:nth-child(3n) {
+        margin-right: 0; } }
 
 .p-skill__head {
   margin-bottom: 40px;
   font-size: 24px;
   font-weight: 700; }
+  @media screen and (max-width: 896px) {
+    .p-skill__head {
+      font-size: 20px; } }
 
 .p-skill__tec {
   margin-bottom: 40px; }
+  @media screen and (max-width: 896px) {
+    .p-skill__tec {
+      font-size: 14px; } }
 
 .p-skill__item {
   margin-bottom: 20px;
@@ -389,6 +454,9 @@ img {
 .p-slider {
   margin: 0 auto;
   width: 100%; }
+  @media screen and (max-width: 896px) {
+    .p-slider {
+      width: 90%; } }
   .p-slider__container {
     position: relative;
     flex-flow: row nowrap; }
@@ -398,6 +466,9 @@ img {
     padding: 20px;
     background-color: #EBD6BF;
     text-align: left; }
+    @media screen and (max-width: 896px) {
+      .p-slider__body {
+        padding: 15px; } }
     .p-slider__body p {
       padding-bottom: 10px;
       font-size: 12px; }
@@ -408,6 +479,9 @@ img {
     margin-right: 20px;
     font-size: 20px;
     font-weight: 700; }
+    @media screen and (max-width: 896px) {
+      .p-slider__name {
+        font-size: 14px; } }
   .p-slider__link {
     display: inline-block;
     font-size: 12px;
@@ -422,13 +496,24 @@ img {
   margin-top: -20px;
   width: 40px;
   height: 40px;
-  cursor: pointer; }
+  cursor: pointer;
+  z-index: 2; }
+  @media screen and (max-width: 896px) {
+    .slide-arrow {
+      top: inherit;
+      bottom: -60px; } }
 
 .prev-arrow {
-  left: -40px; }
+  left: 0px; }
+  @media screen and (max-width: 896px) {
+    .prev-arrow {
+      left: 15px; } }
 
 .next-arrow {
-  right: -40px; }
+  right: 0px; }
+  @media screen and (max-width: 896px) {
+    .next-arrow {
+      right: 15px; } }
 
 .slick-dots li button:before {
   top: 20px !important;
@@ -471,12 +556,19 @@ img {
 /*
 * object/utility/_space.scss
 */
+@media screen and (max-width: 896px) {
+  .u-pbxl {
+    padding-bottom: 40px; } }
+
 .u-px0 {
   padding-right: 0;
   padding-left: 0; }
 
-.u-mr40 {
-  margin: 0 20px; }
+.u-mxl {
+  margin: 0 40px; }
+  @media screen and (max-width: 896px) {
+    .u-mxl {
+      margin: 0 20px; } }
 
 /*
 * object/utility/_position.scss

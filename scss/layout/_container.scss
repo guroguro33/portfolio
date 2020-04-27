@@ -6,11 +6,11 @@
   position: relative;
   margin: 0 auto;
   padding: 80px 120px;
-  width: $site-width;
+  max-width: $site-width;
   text-align: center;
   @include mq(md){
     width: 100%;
-    padding: 40px 120px;
+    padding: 40px 0;
   }
   &__fluid{
     width: 100%;

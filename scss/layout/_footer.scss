@@ -3,7 +3,14 @@
 * layout/_footer.scss
 */
 .l-footer{
+  padding: 0 $space_xl;
   height: 70px;
-  line-height: 70px;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
+  br {
+    display: none;
+    @include mq() {
+      display: block;
+    }
+  }
 }

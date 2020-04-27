@@ -10,5 +10,8 @@
     @include mq(md){
       font-size: $font-size_xl;
     }
+    @include mq(sm){
+      font-size: $font-size_l;
+    }
   }  
 }

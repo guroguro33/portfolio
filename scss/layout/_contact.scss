@@ -4,4 +4,10 @@
 */
 #contact{
   background-color:#fff;
+  br {
+    display: none;
+    @include mq() {
+      display: block;
+    }
+  }
 }

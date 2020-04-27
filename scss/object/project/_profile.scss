@@ -12,6 +12,7 @@
     color: $font-color_sub1;
     @include mq(md){
       flex-direction: column;
+      text-align: inherit;
     }
   }
   &__img{
@@ -19,6 +20,7 @@
     padding: $space_xl;
     width: 30%;
     @include mq(md){
+      margin-bottom: $space_l;
       padding: 0;
       width: 30%;
     }
@@ -26,12 +28,18 @@
   &__explain{
     padding: 0 $space_xl;
     width: 70%;
+    @include mq(md){
+      width: 90%;
+    }
   }
   &__name{
     font-size: $font-size_3l;
     font-weight: 700;
     @include mq(md){
       font-size: $font-size_xxl;
+    }
+    @include mq(sm){
+      font-size: $font-size_l;
     }
   }
   &__item{
@@ -40,7 +48,9 @@
       font-weight: 700;
     }
     @include mq(md){
-      font-size: $font-size_m;
+      &:last-child{
+        text-align: left;
+      }
     }
   }
 }

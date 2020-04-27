@@ -12,4 +12,8 @@
   @include mq(md){
     margin: $space_l 0 $space_4l;
   }
+  @include mq(sm){
+    margin: $space_l 0 $space_xxl;
+    font-size: $font-size_xxl;
+  }
 }

@@ -62,6 +62,12 @@ html, body {
   font-family: $font-family_main;
   text-size-adjust: 100%;
   letter-spacing: 0.1em;
+  @include mq(md){
+    font-size: $font-size_m;
+  }
+  @include mq(sm){
+    font-size: $font-size_s;
+  }
 }
 
 p, a {

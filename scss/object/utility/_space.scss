@@ -2,10 +2,18 @@
 /*
 * object/utility/_space.scss
 */
+.u-pbxl{
+  @include mq(md){
+    padding-bottom: 40px;
+  }
+}
 .u-px0{
   padding-right: 0;
   padding-left: 0;
 }
-.u-mr40{
-  margin: 0 20px;
+.u-mxl{
+  margin: 0 40px;
+  @include mq(md){
+    margin: 0 20px;
+  }
 }
